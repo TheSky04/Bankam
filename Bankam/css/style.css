@@ -1,0 +1,397 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 66em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 39.5em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+  background-color: #222;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.app {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: min-content repeat(3, 15rem) min-content;
+  min-height: 50rem;
+  padding: 1rem 0;
+  opacity: 0;
+  transition: 1s all;
+}
+@media only screen and (max-width: 34.375em) {
+  .app {
+    grid-template-columns: 1fr;
+    margin: 0 2rem;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  opacity: 1;
+  transition: all 1s;
+}
+.nav__logo--container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav__logo {
+  width: 5rem;
+  height: 5rem;
+}
+.nav__logo--text {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: #fff;
+}
+@media only screen and (max-width: 34.375em) {
+  .nav__logo--text {
+    font-size: 1.3rem;
+  }
+}
+
+.form__btn {
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-right: 0.5rem;
+  color: #333;
+  font-weight: 500;
+  font-family: inherit;
+}
+@media only screen and (max-width: 35em) {
+  .form__btn {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 26.6em) {
+  .form__btn {
+    font-size: 0.8rem;
+  }
+}
+.form__btn:focus {
+  outline: none;
+  box-shadow: 0 2rem 4rem rgba(255, 255, 255, 0.1);
+}
+.form__submit {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s;
+}
+.form__submit:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.movements {
+  background-color: #fff;
+  grid-row: 2/5;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  overflow-y: scroll;
+  color: #222;
+}
+.movements__list {
+  list-style-type: none;
+}
+.movements__item {
+  background-color: #868e96;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+.movements__item:not(:last-child) {
+  border-bottom: 3px solid #fff;
+}
+.movements__action {
+  margin-right: 5rem;
+  background-color: blue;
+  border-radius: 1rem;
+  color: #fff;
+  padding: 0.5rem;
+}
+.movements__number {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+.movements__date {
+  margin-right: auto;
+  font-size: 1.3rem;
+  color: #ccc;
+}
+.movements__value {
+  font-weight: 600;
+}
+.movements__deposit {
+  background-image: linear-gradient(to right, #69db7c, #2f9e44);
+}
+.movements__withdrawal {
+  background-image: linear-gradient(to right, #fa5252, #c92a2a);
+}
+
+.operations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 75em) {
+  .operations {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 66em) {
+  .operations {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+  }
+}
+@media only screen and (max-width: 34.375em) {
+  .operations {
+    padding: 5rem;
+  }
+}
+.operations__form {
+  margin-top: -1rem;
+}
+.operations__text {
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 1rem;
+}
+.operations__description {
+  font-size: 1.2rem;
+  font-family: inherit;
+  margin-top: 0.5rem;
+  color: #222;
+}
+.operations__transfer {
+  background-image: linear-gradient(120deg, #dee2e6, #ced4da);
+}
+.operations__input {
+  border: none;
+  padding: 1rem 1.5rem;
+  font-family: inherit;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+.operations__input:focus {
+  outline: none;
+  box-shadow: 0 2rem 4rem rgba(255, 255, 255, 0.2);
+}
+@media only screen and (max-width: 75em) {
+  .operations__input {
+    padding: 0.8rem 1.2rem;
+    width: 40%;
+  }
+}
+.operations__loan {
+  justify-content: flex-start;
+  padding-left: 2rem;
+  background-image: linear-gradient(120deg, #adb5bd, #868e96);
+}
+@media only screen and (max-width: 34.375em) {
+  .operations__loan {
+    padding-left: 6rem;
+  }
+}
+.operations__btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  transition: all 0.3s;
+}
+.operations__btn:hover {
+  cursor: pointer;
+  color: #222;
+}
+.operations__close {
+  background-image: linear-gradient(120deg, #495057, #343a40);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem;
+}
+@media only screen and (max-width: 39.5em) {
+  .summary {
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 34.375em) {
+  .summary {
+    grid-row: 5/6;
+    padding: 2rem 1rem;
+  }
+}
+.summary__group {
+  display: flex;
+  align-items: baseline;
+  margin-right: 1rem;
+}
+.summary__group--interest {
+  margin-right: auto;
+}
+.summary__label {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+.summary__value {
+  font-weight: 600;
+  font-size: 2rem;
+}
+.summary__income {
+  color: #51cf66;
+}
+.summary__withdrawal {
+  color: #fa5252;
+}
+.summary__interest {
+  color: #fcc419;
+}
+.summary__btn {
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #222;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+.summary__btn:hover {
+  cursor: pointer;
+  color: #222;
+  background-color: #fff;
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+@media only screen and (max-width: 34.375em) {
+  .note {
+    padding: 2rem;
+  }
+}
+.note__text {
+  color: #222;
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 48.5em) {
+  .note__text {
+    font-size: 1.2rem;
+  }
+}
+.note__time {
+  font-weight: 700;
+}
+.note__btn {
+  background: none;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+.note__btn:hover {
+  color: #222;
+  cursor: pointer;
+  background-color: #fff;
+}
+@media only screen and (max-width: 48.5em) {
+  .note__btn {
+    font-size: 1.2rem;
+  }
+}
+.note .furkan {
+  text-decoration: none;
+  color: #495057;
+  transition: all 0.3s;
+}
+.note .furkan:hover {
+  color: #222;
+}
+
+.datetime {
+  color: #fff;
+  align-self: center;
+  font-size: 2.5rem;
+}
+.balance {
+  color: #fff;
+  font-size: 5.6rem;
+  text-align: end;
+}
+@media only screen and (max-width: 34.375em) {
+  .balance {
+    grid-row: 1/2;
+  }
+}
+
+.table {
+  background-color: #fff;
+  width: 30%;
+  height: 80%;
+}
+.table__body {
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+/*# sourceMappingURL=style.css.map */

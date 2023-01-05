@@ -1,0 +1,28 @@
+{
+  "name": "bankers-proje",
+  "version": "1.0.0",
+  "description": "Bankam is a very useful platform for users where you can easily browse your account or do a lot of transactions such as borrowing money.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bank",
+    "Bank",
+    "Account",
+    "Loan",
+    "Money",
+    "Request",
+    "Money",
+    "Money",
+    "Transfer"
+  ],
+  "author": "Furkan Baş",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}

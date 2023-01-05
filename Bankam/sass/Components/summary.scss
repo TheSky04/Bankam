@@ -1,0 +1,65 @@
+.summary {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem;
+
+  @media only screen and (max-width: 39.5em) {
+    padding: 1rem;
+  }
+
+  @media only screen and (max-width: 34.375em) {
+    grid-row: 5/6;
+    padding: 2rem 1rem;
+  }
+
+  &__group {
+    display: flex;
+    align-items: baseline;
+    margin-right: 1rem;
+  }
+
+  &__group--interest {
+    margin-right: auto;
+  }
+
+  &__label {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  &__value {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  &__income {
+    color: #51cf66;
+  }
+
+  &__withdrawal {
+    color: #fa5252;
+  }
+
+  &__interest {
+    color: #fcc419;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #222;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    font-family: inherit;
+
+    &:hover {
+      cursor: pointer;
+      color: #222;
+      background-color: #fff;
+    }
+  }
+}

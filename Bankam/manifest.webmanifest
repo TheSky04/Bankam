@@ -1,0 +1,14 @@
+{
+  "icons": [
+    {
+      "src": "logos/bankam-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logos/bankam-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

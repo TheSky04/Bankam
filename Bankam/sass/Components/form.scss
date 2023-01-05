@@ -1,0 +1,40 @@
+.form {
+  &__btn {
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-right: 0.5rem;
+    color: #333;
+    font-weight: 500;
+    font-family: inherit;
+
+    @media only screen and (max-width: 35em) {
+      font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 26.6em) {
+      font-size: 0.8rem;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 2rem 4rem rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__submit {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}

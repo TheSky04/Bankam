@@ -1,0 +1,86 @@
+.operations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+
+  @media only screen and (max-width: 75em) {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 66em) {
+    font-size: 1.4rem;
+    padding-left: 1rem;
+  }
+
+  @media only screen and (max-width: 34.375em) {
+    padding: 5rem;
+  }
+
+  &__form {
+    margin-top: -1rem;
+  }
+
+  &__text {
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    font-family: inherit;
+    margin-top: 0.5rem;
+    color: #222;
+  }
+
+  &__transfer {
+    background-image: linear-gradient(120deg, #dee2e6, #ced4da);
+  }
+
+  &__input {
+    border: none;
+    padding: 1rem 1.5rem;
+    font-family: inherit;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 2rem 4rem rgba(255, 255, 255, 0.2);
+    }
+
+    @media only screen and (max-width: 75em) {
+      padding: 0.8rem 1.2rem;
+      width: 40%;
+    }
+  }
+
+  &__loan {
+    justify-content: flex-start;
+    padding-left: 2rem;
+
+    background-image: linear-gradient(120deg, #adb5bd, #868e96);
+
+    @media only screen and (max-width: 34.375em) {
+      padding-left: 6rem;
+    }
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      color: #222;
+    }
+  }
+
+  &__close {
+    background-image: linear-gradient(120deg, #495057, #343a40);
+  }
+}

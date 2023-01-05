@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankam &ndash; Türkiye'nin Bankası</title>
+    <meta
+      name="description"
+      description="Bankam is a very useful platform for users where you can easily browse your account or do a lot of transactions such as borrowing money."
+    />
+    <meta name="theme-color" content="#333" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript,Bank,Bank Account,Loan Money, Request Money, Money Transfer"
+    />
+    <meta name="author" content="Furkan Baş" />
+    <link rel="icon" href="logos/bankam-64.png" />
+    <link rel="apple-touch-icon" href="logos/bankam-180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav class="nav container">
+      <div class="nav__logo--container">
+        <img src="logos/bankam.png" class="nav__logo" alt="Bankam logo" />
+        <p class="nav__logo--text">Bankam</p>
+      </div>
+      <table class="table">
+        <thead class="table__header">
+          <tr>
+            <th>İsim</th>
+            <th>Şifre</th>
+          </tr>
+        </thead>
+        <tbody class="table__body">
+          <tr>
+            <td>Furkan</td>
+            <td>3429</td>
+          </tr>
+          <tr>
+            <td>Elif</td>
+            <td>1200</td>
+          </tr>
+          <tr>
+            <td>Akif</td>
+            <td>1111</td>
+          </tr>
+        </tbody>
+      </table>
+      <form class="form">
+        <input type="text" class="form__btn form__login" placeholder="isim" />
+        <input
+          type="password"
+          maxlength="6"
+          class="form__btn form__password"
+          placeholder="Şifre"
+        />
+        <button class="form__submit">&rarr;</button>
+      </form>
+    </nav>
+    <main class="app container">
+      <div class="datetime">
+        <div class="datetime__text">
+          <span class="datetime__time">05/03/2022 , 16:32</span>
+        </div>
+      </div>
+      <div class="balance">
+        <div class="balance__text">1200₺</div>
+      </div>
+      <div class="movements">
+        <ul class="movements__list">
+          <li class="movements__item">
+            <p class="movements__action movements__deposit">
+              <span class="movements__number">01</span>Depozito
+            </p>
+            <p class="movements__date">05/03/2022</p>
+            <p class="movements__value">500 ₺</p>
+          </li>
+          <li class="movements__item">
+            <p class="movements__action movements__withdrawal">
+              <span class="movements__number">02</span>Para çekimi
+            </p>
+            <p class="movements__date">05/03/2022</p>
+            <p class="movements__value">500 ₺</p>
+          </li>
+        </ul>
+      </div>
+      <div class="operations operations__transfer">
+        <form class="operations__form operations__form--transfer">
+          <p class="operations__text">Para transferi</p>
+          <input
+            type="text"
+            class="operations__input operations__transferTo"
+            placeholder="Kime ?"
+          />
+          <input
+            type="number"
+            class="operations__input operations__amount operations__amount--transfer"
+            placeholder="Miktar"
+          />
+          <button class="operations__btn">&rarr;</button>
+          <p class="operations__description">
+            Para göndermek istediğiniz kişinin adını ve göndermek istediğiniz
+            miktarı giriniz.
+          </p>
+        </form>
+      </div>
+      <div class="operations operations__loan">
+        <form class="operations__form operations__form--loan">
+          <p class="operations__text">Para isteği</p>
+          <input
+            type="number"
+            class="operations__input operations__amount operations__amount--loan"
+            placeholder="Miktar"
+          />
+          <button class="operations__btn">&rarr;</button>
+          <p class="operations__description">
+            Mevcut bakineyinizin %10'u kadar kredi çekebilirsiniz.
+          </p>
+        </form>
+      </div>
+      <div class="operations operations__close">
+        <form class="operations__form operations__form--close">
+          <p class="operations__text">Hesabı Kapat</p>
+          <input
+            type="text"
+            class="operations__input operations__accountName"
+            placeholder="İsim "
+          />
+          <input
+            type="password"
+            maxlength="6"
+            class="operations__input operations__accountPassword"
+            placeholder="Şifre"
+          />
+          <button class="operations__btn">&rarr;</button>
+          <p class="operations__description">
+            Hesabınızı kapatmak istiyorsanız gerekli bilgileri giriniz bu işlem
+            geri alınamaz.
+          </p>
+        </form>
+      </div>
+      <div class="summary">
+        <div class="summary__group">
+          <label for="income" class="summary__label">Nakit</label>
+          <p class="summary__income summary__value" id="income">300₺</p>
+        </div>
+        <div class="summary__group">
+          <label for="withdrawal" class="summary__label">Çekim</label>
+          <p class="summary__withdrawal summary__value" id="withdrawal">200₺</p>
+        </div>
+        <div class="summary__group summary__group--interest">
+          <label for="interest" class="summary__label">Faiz</label>
+          <p class="summary__interest summary__value" id="interest">10.5₺</p>
+        </div>
+        <button class="summary__btn">Sırala &uarr;</button>
+      </div>
+      <div class="note">
+        <p class="note__text">
+          Bankam bir
+          <a href="https://github.com/TheSky04" target="_blank" class="furkan"
+            >Furkan Baş</a
+          >
+          eseridir.
+          <button class="note__btn">Çıkış Yap</button>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

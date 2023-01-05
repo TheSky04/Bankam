@@ -1,0 +1,9 @@
+.balance {
+  color: #fff;
+  font-size: 5.6rem;
+  text-align: end;
+
+  @media only screen and (max-width: 34.375em) {
+    grid-row: 1 /2;
+  }
+}

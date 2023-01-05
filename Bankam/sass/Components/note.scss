@@ -1,0 +1,53 @@
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+
+  @media only screen and (max-width: 34.375em) {
+    padding: 2rem;
+  }
+
+  &__text {
+    color: #222;
+    font-size: 1.5rem;
+
+    @media only screen and (max-width: 48.5em) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__time {
+    font-weight: 700;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    font-weight: 600;
+
+    &:hover {
+      color: #222;
+      cursor: pointer;
+      background-color: #fff;
+    }
+
+    @media only screen and (max-width: 48.5em) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .furkan {
+    text-decoration: none;
+    color: #495057;
+    transition: all 0.3s;
+    &:hover {
+      color: #222;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.movements {
+  background-color: #fff;
+  grid-row: 2 / 5;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  overflow-y: scroll;
+  color: #222;
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    background-color: #868e96;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 3px solid #fff;
+  }
+
+  &__action {
+    margin-right: 5rem;
+    background-color: blue;
+    border-radius: 1rem;
+    color: #fff;
+    padding: 0.5rem;
+  }
+
+  &__number {
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+  }
+
+  &__date {
+    margin-right: auto;
+    font-size: 1.3rem;
+    color: #ccc;
+  }
+
+  &__value {
+    font-weight: 600;
+  }
+
+  &__deposit {
+    background-image: linear-gradient(to right, #69db7c, #2f9e44);
+  }
+
+  &__withdrawal {
+    background-image: linear-gradient(to right, #fa5252, #c92a2a);
+  }
+}

@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+
+  opacity: 1;
+  transition: all 1s;
+
+  &__logo--container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__logo {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__logo--text {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    color: #fff;
+
+    @media only screen and (max-width: 34.375em) {
+      font-size: 1.3rem;
+    }
+  }
+}

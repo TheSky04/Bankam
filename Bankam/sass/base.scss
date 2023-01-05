@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// huge => 75em = 1200px
+// big 66em => 1056px
+// normal 48.5em => 776px
+// small 39.5em => 632px
+// so small 34.375 => 550px
+// too small 26.6 => 425px
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 75em) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: 66em) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: 39.5em) {
+    font-size: 43.75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+  background-color: #222;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.app {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: min-content repeat(3, 15rem) min-content;
+  min-height: 50rem;
+  padding: 1rem 0;
+
+  opacity: 0;
+  transition: 1s all;
+
+  @media only screen and (max-width: 34.375em) {
+    grid-template-columns: 1fr;
+    margin: 0 2rem;
+  }
+}
